@@ -1,4 +1,4 @@
-// components/NHLStats.js
+// components/header.js
 
 import { useEffect, useState } from 'react'
 import { supabase } from "../utils/supabaseClient.js"
@@ -6,16 +6,17 @@ import Link from 'next/link'
 
 export default function Header({ user }) {
     var username = user.email.substr(0, user.email.indexOf('@'));
-    /* Everything went as expected, show full app */
     return (
         <div className="flex justify-between px-5 py-2">
             <p1>Hello, {username}!</p1>
-            <button>
-                <Link href="../components/GameScore.js"><a>General Stats</a></Link>
-            </button>
-            <Link href="../components/GameScore.js"><a>Game Scores</a></Link>
-            <Link href="../components/GameScore.js"><a>About</a></Link>
-            <Link href="../components/GameScore.js"><a>Account Settings</a></Link>
+            {/* tried to div around the three middle links but they didn't justify properly */}
+            {/* no clue why but none of these links work properly. tried to put them in a, tried to put the pages in different folders, tried every possible PATH combo */}
+            <Link href="./NHLStats.js">NHL Stats</Link>
+            <Link href="./GameScore.js">Game Scores</Link>
+            {/* tried to add a legitimate about page but for some reason these href links won't work infuriatingly */}
+            {/* <Link href="./About.js">Game Scores</Link> */}
+            {/* used my about page from the first week to at least have some functionality */}
+            <a href="https://bkahn-cpsc458-1.netlify.app/" target="_blank">About the Creator</a>
             <button onClick={async () => {let { error } = await supabase.auth.signOut()}} className="text-black-300">
                 Log Off
             </button>
