@@ -1,8 +1,5 @@
 import Head from 'next/head'
-import Greeting from '../components/Greeting'
-import History from '../components/History'
-import Input from '../components/Input'
-import GratitudeApp from '../components/GratitudeApp'
+import NHLStats from '../components/NHLStats'
 import { useState } from 'react'
 import { Auth } from '@supabase/ui'
 import { supabase } from "../utils/supabaseClient.js"
@@ -14,22 +11,22 @@ export default function Home() {
   const { user } = Auth.useUser()
 
   return (
-    <div className="bg-blue-900 min-h-screen min-w-screen">
+    <div className="bg-white min-h-screen min-w-screen">
       <Head>
-        <title>Gratitude Journal</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>NHL Stats</title>
+        <link rel="icon" href="/sticks.ico" />
       </Head>
 
-      <main className="container mx-auto px-4 pt-12">
+      <main>
         {
           // display app if user is logged in, otherwise show login module
           user ? (
             <div>
-              <GratitudeApp user={user} />
+              <NHLStats user={user} />
               <button onClick={async () => {
                   let { error } = await supabase.auth.signOut()
                 }} 
-                className="text-pink-300">
+                className="text-black-300">
                   Log Off
               </button>
             </div>

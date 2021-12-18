@@ -8,8 +8,8 @@
   "dependencies": {
     "@supabase/supabase-js": "^1.24.0",
     "@supabase/ui": "^0.35.0",
-    "netlify-cli": "^6.14.0",
-    "next": "latest",
+    "netlify-cli": "^1.2.3",
+    "next": "^12.0.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
