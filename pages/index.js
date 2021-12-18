@@ -11,7 +11,7 @@ export default function Home() {
   const { user } = Auth.useUser()
 
   return (
-    <div className="bg-white min-h-screen min-w-screen">
+    <div className="flex grow items-center justify-center bg-white min-h-screen min-w-screen">
       <Head>
         <title>NHL Stats</title>
         <link rel="icon" href="/sticks.ico" />
@@ -31,7 +31,8 @@ export default function Home() {
               </button>
             </div>
           ) : (
-            <div className="bg-white">
+            <div className="content-center">
+              <p1>Welcome to NHL Analytics!</p1>
               <Auth supabaseClient={supabase} socialLayout="horizontal" socialButtonSize="xlarge"/>
             </div> 
           )       
