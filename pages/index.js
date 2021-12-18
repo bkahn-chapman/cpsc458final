@@ -1,6 +1,7 @@
 import Head from 'next/head'
-import NHLStats from '../components/NHLStats'
+import GameScore from '../components/GameScore.js'
 import { useState } from 'react'
+import 'tailwindcss/tailwind.css'
 import { Auth } from '@supabase/ui'
 import { supabase } from "../utils/supabaseClient.js"
 
@@ -11,7 +12,7 @@ export default function Home() {
   const { user } = Auth.useUser()
 
   return (
-    <div className="flex grow items-center justify-center bg-white min-h-screen min-w-screen">
+    <div className="w-full h-full bg-white">
       <Head>
         <title>NHL Stats</title>
         <link rel="icon" href="/sticks.ico" />
@@ -22,13 +23,7 @@ export default function Home() {
           // display app if user is logged in, otherwise show login module
           user ? (
             <div>
-              <NHLStats user={user} />
-              <button onClick={async () => {
-                  let { error } = await supabase.auth.signOut()
-                }} 
-                className="text-black-300">
-                  Log Off
-              </button>
+              <GameScore user={user} />
             </div>
           ) : (
             <div className="p-5 text-center text-4xl font-semibold">
