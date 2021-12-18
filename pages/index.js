@@ -31,7 +31,7 @@ export default function Home() {
               </button>
             </div>
           ) : (
-            <div className="text-center text-4xl font-semibold">
+            <div className="p-5 text-center text-4xl font-semibold">
               <p1>Benjamin Kahn's NHL Analytics!</p1>
               <Auth supabaseClient={supabase} socialLayout="horizontal" socialButtonSize="xlarge"/>
             </div> 
