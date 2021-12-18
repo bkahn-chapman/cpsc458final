@@ -32,7 +32,8 @@ export default function Home() {
             </div>
           ) : (
             // log-on page
-            <div className="p-5 text-center text-4xl font-semibold">
+            <div className="flex flex-col p-5 justify-center items-center text-center object-center text-4xl font-semibold">
+              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/05_NHL_Shield.svg/800px-05_NHL_Shield.svg.png" alt="The NHL logo" className="object-center items-center justify-center w-1/3 h-1/3"></img>
               <p1>Benjamin Kahn's NHL Analytics</p1>
               <Auth supabaseClient={supabase} socialLayout="horizontal" socialButtonSize="xlarge"/>
             </div> 
