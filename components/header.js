@@ -11,6 +11,7 @@ export default function Header({ user }) {
             <p1>Hello, {username}!</p1>
             {/* tried to div around the three middle links but they didn't justify properly */}
             {/* no clue why but none of these links work properly. tried to put them in a, tried to put the pages in different folders, tried every possible PATH combo */}
+            {/* this is the reason why I couldn't get more functionality in, spent literal hours trying to figure out how to fix this but to no avail */}
             <Link href="./NHLStats.js">NHL Stats</Link>
             <Link href="./GameScore.js">Game Scores</Link>
             {/* tried to add a legitimate about page but for some reason these href links won't work infuriatingly */}

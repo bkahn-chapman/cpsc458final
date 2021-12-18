@@ -24,6 +24,9 @@ export default function Home() {
           user ? (
             <div>
               {/* displays the GameScore Tableau */}
+              {/* attempted to do all of the separate pages here in lieu of having links in the header */}
+              {/* instead the buttons in the header would hide everything except the desired page */}
+              {/* instead the buttons in the header would hide everything except the desired page */}
               <GameScore user={user} />
             </div>
           ) : (
