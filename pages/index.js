@@ -26,7 +26,8 @@ export default function Home() {
               {/* displays the GameScore Tableau */}
               {/* attempted to do all of the separate pages here in lieu of having links in the header */}
               {/* instead the buttons in the header would hide everything except the desired page */}
-              {/* instead the buttons in the header would hide everything except the desired page */}
+              {/* did not work as I couldn't easily pass in the user variables and it was difficult to figure out the functionality of hiding all that */}
+              {/* also tried to just have all of the pages in here scrolling with the header fixed up top but the header would overlap there and wouldn't justify between correctly */}
               <GameScore user={user} />
             </div>
           ) : (
